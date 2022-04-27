@@ -37,5 +37,14 @@ void LSTM_Unit::performInference(double i, double f, double c, double o)
 double LSTM_Unit::sigmoid(double x)
 {
     return (1/(1+exp(-x)));
-//    return (x/sqrt(1+pow(x,2)));
+}
+
+/**
+ * Getter for hidden_state_
+ *
+ * @return hidden_state_ private variable
+ */
+double LSTM_Unit::get_hidden_state_() const
+{
+    return this->hidden_state_;
 }
